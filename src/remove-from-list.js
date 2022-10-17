@@ -27,7 +27,7 @@ function removeKFromList(l, k) {
     return l;
   }
 
-  while (l.value === k && l.next.value && l.next.value !== k) {
+  while (l.value === k) {
     l = l.next;
   }
 
@@ -44,46 +44,10 @@ function removeKFromList(l, k) {
   }
 
   if (last && node.value === k) {
-    // if (node.next.value === k) {
-
     last.next = node.next;
-    // }
   }
 
   return l;
-
-  //  while (l.value == k) {
-  //    l = l.next;
-  //  }
-
-  //  currentNode = l;
-  //  nextNode = currentNode.next;
-
-  //  while (nextNode != null) {
-  //    if (nextNode.value == k) {
-  //      currentNode.next = nextNode.next;
-
-  //      if (currentNode.next == null) {
-  //        break;
-  //      }
-
-  //      currentNode = currentNode.next;
-  //      nextNode = currentNode.next;
-  //    }
-  //  }
-
-  //  return l;
-
-  //   if (l.value === k) {
-  //     return l.next ? removeKFromList(l.next, k) : null;
-  //   } else {
-  //     return {
-  //       next: removeKFromList(l.next, k),
-  //       value,
-  //     };
-
-  //    //  return
-  //   }
 }
 
 module.exports = {
